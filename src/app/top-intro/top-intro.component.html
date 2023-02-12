@@ -1,37 +1,31 @@
 <div class="introPage">
 
-
-    <div class="content">
+    <div class="intro">
       <div class="imgs">
         <img src="./assets/img/Purple shadow.png" alt="" class="shadow">
         <img src="./assets/img/myPicture.png" alt="" class="myPicture">
-  
       </div>
   
       <div class="introTextAndBtn">
         <div class="introText">
-          <div class="txt-vertikal">
-            <span> I am</span>
-          </div>
+            <span class="txt-vertikal"> I am</span>
           <div class="text-right">
             <p class="name">Majda Halim</p>
-            <p class="job">Frontend Developer</p>
+            <p class="profession">Frontend Developer</p>
           </div>
-  
         </div>
   
-        <button>let's talk</button>
+        <button (click)="scrollToArea('contactMe')">let's talk</button>
       </div>
-      <img src="./assets/img/shape.png" alt="" class="shape">
-  
-  
     </div>
     <div class="section-down">
       <div class="contact-detail">
         halim@gmail.com
       </div>
       <div class="scroll-txt">
-        <span>Scroll down</span>
+        <span (click)="scrollToArea('aboutMe')">Scroll down</span>
       </div>
     </div>
+    <img src="./assets/img/shape.png" alt="" class="shape">
+
   </div>
