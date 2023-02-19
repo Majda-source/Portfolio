@@ -1,0 +1,118 @@
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px 0;
+  }
+  
+  .project {
+    margin-bottom: 30px;
+    position: relative;
+    width: calc(50% - 10px);
+    border: 1px salmon solid;
+    border-radius: 10px;
+    width: 600px;
+    height: 600px;
+  }
+  
+  .project img {
+    width: 100%;
+    height: auto;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .project:hover img {
+    transform: scale(1.9);
+    
+
+  }
+  
+  .hover-project {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    //transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+  }
+
+  @keyframes slide-in {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .hover-project{
+    //border: 1px salmon solid;
+    border-radius: 10px;
+  }
+
+ 
+  
+  .hover-description{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projects{
+    margin-left: 40px;
+    margin-right: 40px;
+    div{
+      display: flex;
+      overflow: hidden;
+    }
+  }
+  
+  .project:hover .hover-project {
+    animation: slide-in 1s ease-in-out backwards;
+  }
+  
+  .hover-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 25px;
+  }
+  
+  .hover-buttons button {
+    margin: 0 10px;
+  }
+  
+  .hover-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    border: 1px solid white;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
+  
+  .hover-text {
+    text-align: center;
+    color: #fff;
+    margin: 20px;
+  }
+
+
+  .work-img{
+    img{
+      width: 600px;
+      height: 600px;
+    }
+
+  }
+  

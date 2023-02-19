@@ -1,1 +1,12 @@
-<p>skills works! Lorem ipsum dolor sit amet consectetur adipisicing elit. A praesentium dolore nesciunt? Voluptas optio possimus debitis dolorum aperiam labore necessitatibuslpa eum temporibus porro fugiat qui placeat.</p>
+
+<div class="skills-sektion">
+    <div class="skills">
+        <div class="skill" *ngFor="let skill of skills">
+            <img src="assets/img/skills/{{ skill.icon }}" alt=""
+            (mouseenter)="onMouseEnter($event)" (mouseleave)="onMouseLeave($event)">
+            <span> {{ skill.name }}</span>
+
+        </div>
+    </div>
+    <div class="skills-text">skills:Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium neque aperiam recusandae est fugiat, ut nesciunt velit qui minus id maxime numquam. Officiis deserunt eaque quod, ex distinctio accusantium. Saepe.</div>
+</div>

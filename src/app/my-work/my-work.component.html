@@ -1,0 +1,19 @@
+<div class="projects" [@fadeInRight]>
+    <div *ngFor="let project of projects" class="project" (mouseenter)="project.showDetails = true" (mouseleave)="project.showDetails = false">
+      <img [src]="project.imageSrc">
+      <div *ngIf="project.showDetails" class="hover-project">
+        <div class="hover-buttons">
+          <a [href]="project.githubUrl" target="_blank"><button mat-button color="primary">Github</button></a>
+          <a [href]="project.liveTestUrl" target="_blank"><button mat-button color="primary">Live Test</button></a>
+        </div>
+        <div class="hover-description">
+          <div class="hover-text">
+            <h4>{{ project.title }}</h4>
+            <span>{{ project.description }}</span>
+            <span style="color: #00BEE8;">{{ project.technologies }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

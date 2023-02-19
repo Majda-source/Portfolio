@@ -9,6 +9,8 @@ import { TopIntroComponent } from './top-intro/top-intro.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { SkillsComponent } from './skills/skills.component';
+import { MyWorkComponent } from './my-work/my-work.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { SkillsComponent } from './skills/skills.component';
     TopIntroComponent,
     AboutMeComponent,
     ContactMeComponent,
-    SkillsComponent
+    SkillsComponent,
+    MyWorkComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
