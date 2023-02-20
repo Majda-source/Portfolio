@@ -20,16 +20,16 @@ interface Project {
 export class MyWorkComponent {
 
   showDiv: boolean = false;
-   onScroll(event: any) {
+ 
+  onScroll(event: any) {
     const div = document.querySelector('.projects') as HTMLElement;
-    const rect = div.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
     const divHeight = div.offsetHeight;
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
   
-    if (rect.top - windowHeight + divHeight * 0.1 <= scrollPosition && !this.showDiv) {
+    if (scrollPosition >= div.offsetTop + divHeight * 0.1 && !this.showDiv) {
       this.showDiv = true;
     }
+  
   
   
   }
@@ -61,7 +61,7 @@ export class MyWorkComponent {
       showDetails: false
     },
     {
-      title: 'Loco Project',
+      title: 'Poco Loco Project',
       description: 'This is a project  lorem lorem ispusm lorem ipsum lorem ipsumlorem ipsumlorem ipsu',
       technologies: 'Javascript, HTML, CSS',
       imageSrc: 'assets/img/myWork/pocoloco.png',
@@ -72,7 +72,7 @@ export class MyWorkComponent {
     {
       title: 'Pokedex Project',
       description: 'This is a project that lorem lorem ispusm lorem ipsum lorem ipsumlorem ipsumlorem ipsu.',
-      technologies: 'Javascript, Rest Api',
+      technologies: 'Javascript, HTML, CSS Rest Api',
       imageSrc: 'assets/img/myWork/pokedex.png',
       githubUrl: 'https://github.com/',
       liveTestUrl: 'https://',
