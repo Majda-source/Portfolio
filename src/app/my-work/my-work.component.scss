@@ -1,4 +1,7 @@
 
+h1{
+  margin-left: 40px;
+}
 .projects {
     display: flex;
     flex-wrap: wrap;
@@ -10,8 +13,8 @@
     margin-bottom: 30px;
     position: relative;
     width: calc(50% - 10px);
-    border: 1px salmon solid;
-    border-radius: 10px;
+    border: 2px #FF4747 solid;
+    border-radius: 24px;
     width: 600px;
     height: 600px;
   }

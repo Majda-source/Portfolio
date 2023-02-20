@@ -1,4 +1,6 @@
-<div class="projects" [@fadeInRight]>
+<div>
+<h1>Porfolio</h1>
+<div class="projects" [@fadeInRight]="showDiv">
     <div *ngFor="let project of projects" class="project" (mouseenter)="project.showDetails = true" (mouseleave)="project.showDetails = false">
       <img [src]="project.imageSrc">
       <div *ngIf="project.showDetails" class="hover-project">
@@ -10,10 +12,12 @@
           <div class="hover-text">
             <h4>{{ project.title }}</h4>
             <span>{{ project.description }}</span>
-            <span style="color: #00BEE8;">{{ project.technologies }}</span>
+            <span style="color: #FF4747;">{{ project.technologies }}</span>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
   

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { fadeInRightAnimation } from './../animations/animations';
 
 interface Project {
@@ -16,46 +16,66 @@ interface Project {
   styleUrls: ['./my-work.component.scss'],
   animations: [fadeInRightAnimation]
 })
+
 export class MyWorkComponent {
 
-  fadeInRight = false;
+  showDiv: boolean = false;
+   onScroll(event: any) {
+    const div = document.querySelector('.projects') as HTMLElement;
+    const rect = div.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    const divHeight = div.offsetHeight;
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  
+    if (rect.top - windowHeight + divHeight * 0.1 <= scrollPosition && !this.showDiv) {
+      this.showDiv = true;
+    }
+  
+  
+  }
+
+ 
+
+
+  
+  
 
   
   public projects: Project[] = [
     {
       title: 'Join Project',
-      description: 'This is a game project that I worked on. It was a lot of fun and I learned a lot while building it.',
-      technologies: 'Angular, Phaser, Firebase',
+      description: 'This is a lorem lorem ispusm lorem ipsum lorem ipsumlorem ipsumlorem ipsum lorem ipsum  .',
+      technologies: 'javascript, HTML, CSS',
       imageSrc: 'assets/img/myWork/join.png',
-      githubUrl: 'https://github.com/yourusername/game',
-      liveTestUrl: 'https://game.yourdomain.com',
+      githubUrl: 'https://github.com/',
+      liveTestUrl: 'https://',
       showDetails: false
     },
     {
       title: 'crm Project',
-      description: 'This is a project that I worked on that allows users to join and participate in groups.',
-      technologies: 'Angular, Firebase, Bootstrap',
+      description: 'This is a project  lorem lorem ispusm lorem ipsum lorem ipsumlorem ipsumlorem ipsu',
+      technologies: 'Angular, Firebase',
       imageSrc: 'assets/img/myWork/crm.png',
-      githubUrl: 'https://github.com/yourusername/join',
-      liveTestUrl: 'https://join.yourdomain.com',
+      githubUrl: 'https://github.com/',
+      liveTestUrl: 'https://',
       showDetails: false
     },
     {
       title: 'Loco Project',
-      description: 'This is a project that I worked on that helps people find local restaurants.',
-      technologies: 'Angular, Firebase, Google Maps',
+      description: 'This is a project  lorem lorem ispusm lorem ipsum lorem ipsumlorem ipsumlorem ipsu',
+      technologies: 'Javascript, HTML, CSS',
       imageSrc: 'assets/img/myWork/pocoloco.png',
-      githubUrl: 'https://github.com/yourusername/loco',
-      liveTestUrl: 'https://loco.yourdomain.com',
+      githubUrl: 'https://github.com/',
+      liveTestUrl: 'https://',
       showDetails: false
     },
     {
-      title: 'Lila Project',
-      description: 'This is a project that I worked on that helps people learn new languages.',
-      technologies: 'Angular, Firebase, Web Speech API',
-      imageSrc: 'assets/img/myWork/pocoloco.png',
-      githubUrl: 'https://github.com/yourusername/lila',
-      liveTestUrl: 'https://lila.yourdomain.com',
+      title: 'Pokedex Project',
+      description: 'This is a project that lorem lorem ispusm lorem ipsum lorem ipsumlorem ipsumlorem ipsu.',
+      technologies: 'Javascript, Rest Api',
+      imageSrc: 'assets/img/myWork/pokedex.png',
+      githubUrl: 'https://github.com/',
+      liveTestUrl: 'https://',
       showDetails: false
     }
   ];
